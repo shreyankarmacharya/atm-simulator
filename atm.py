@@ -14,13 +14,14 @@ def atm():
 5. Exit
 """)
     while True:
-        userinput = input("Enter the action you wanna perform: ")
+        while True:
+            userinput = input("Enter the action you wanna perform: ")
 
-        if userinput.isdigit():
-            userinput = int(userinput)
-        else:
-            print("Invalid action")
-            userinput = -1
+            if userinput.isdigit():
+                userinput = int(userinput)
+                break
+            else:
+                print("Invalid action")
 
         match userinput:
 
@@ -64,7 +65,7 @@ def atm():
                 print("Invalid action")
 
 
-input("Enter your account number: ")  # realism
+input("Enter your account number: ")  # for realism
 
 while True:
     entered_pin = input("Enter your account pin: ")
